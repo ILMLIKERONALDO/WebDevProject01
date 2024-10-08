@@ -3,6 +3,7 @@ const cells = board.getElementsByClassName('cell');
 const status = document.getElementById('status');
 const resetButton = document.getElementById('reset-button');
 
+let styleColor = 'red';
 let currentPlayer = 'X';
 let gameActive = true;
 const boardState = Array(9).fill(null);
@@ -44,7 +45,10 @@ const handleClick = (event) => {
     }
 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+    styleColor = styleColor === 'red' ? 'blue' : 'red';
+    status.style.color = styleColor;
     status.textContent = `Player ${currentPlayer}'s turn`;
+
 };
 
 const resetGame = () => {

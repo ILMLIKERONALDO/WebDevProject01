@@ -1,0 +1,48 @@
+body{
+    background-color:#adfbfa;
+    font-style: "Ariel", sans-serif;
+}
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content:center;/* Hidden initially */
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #008CBA;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+h1{
+    text-align:center;
+}
+#canvas{
+    border: 5px solid #12432131;
+    background-color:#ff00003e;
+    cursor:crosshair;
+}
+.hamburger {
+    cursor: pointer;
+    margin: 20px;
+    display: none; /* Hidden by default, shown in media queries */
+}
+/* When 'show' class is added, display nav-links in a vertical column */
+.nav-links.show {
+    display: block;
+    flex-direction: column;
+}
+@media screen and (max-width: 768px){
+    .hamburger {
+        display: inline-block; /* Show hamburger icon on smaller screens */
+    }
+    .nav-links {
+        display: none; /* Hidden initially */
+    }
+}

@@ -1,0 +1,17 @@
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: #2890ff;
+    outline: 5px solid #000;
+    border-radius: 10px;
+    margin: auto;
+
+}
+#line{
+    width:200px;
+    
+}
+#hr{
+    color:blueviolet;
+    
+}

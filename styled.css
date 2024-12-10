@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-image:url(wallpaper.png);
+    align-content: space-between;
+    flex-direction: column;
+    background-size:contain;
+}
+
+h1 {
+    margin-bottom: 20vw;
+    font-size:1000%;
+}
+h3 {
+    font-size:large; 
+    color:#FA8800;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 7vw);
+    grid-template-rows: repeat(3, 7vw);
+    gap: 5px;
+    justify-content: center;
+}
+
+.cell {
+    width: 6vw;
+    height: 6vw;
+    background-color: 'red';
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#reset-button {
+    margin-top: 9px;
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 20px;   
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Hide navigation links by default */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: none; /* Hidden initially */
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #008CBA;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Show the menu when 'show' class is added */
+.show {
+    display: block;
+}
+.ilmmubasher {
+    width: 20vw;
+    height: auto;
+    float: left;  /* Align the image to the left */
+    margin-right: 20px;  /* Optional: Add some space to the right */
+}

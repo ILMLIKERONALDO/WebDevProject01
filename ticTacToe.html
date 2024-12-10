@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic WEB Toe - Play</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styled.css">
 </head>
 <body>
+    <img src="C:\Users\dell\Desktop\aboutme\IlmMubasher.png" alt="IlmMubasher" class="ilmmubasher" />
+    <br />
     <h1>Tic WEB Toe</h1>
     <h3>Created by CHAT GPT and ILM MUBASHER</h3>
-    <a href="main.html">
-        Tic WEB Toe&nbsp;
-    </a>
-    <a href="help.html">
-        Help&nbsp;
-    </a>
-    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpgbBLPvKlgMGtvMlwhfhMRJzvnrdkXSfxSPwdvnpWWVJFMZSqbPWqqkbcsQNPfhprcHpn">
-        Contact&nbsp;
-    </a>
-    <a href="ticTacToe.html">
-        Play
-    </a>
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul id="nav-links" class="nav-links">
+        <h2>ILM MUBASHER</h2>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="totallyNotRickroll.html">Surprise me</a></li>
+        <li><a href="C:/Users/dell/Desktop/WebDevProject01/ticTacToe.html" style="text-decoration:underline">Tic WEB Toe</a></li>
+        <hr />
+        <h2>TIC WEB TOE</h2>
+        <li><a href="main.html">
+            Home&nbsp;
+        </a></li>
+        <li><a href="help.html">
+            Help&nbsp;
+        </a></li>
+        <li><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpgbBLPvKlgMGtvMlwhfhMRJzvnrdkXSfxSPwdvnpWWVJFMZSqbPWqqkbcsQNPfhprcHpn">
+            Contact&nbsp;
+        </a></li>
+        <li><a href="ticTacToe.html" style="text-decoration:underline">
+            Play
+        </a></li>
+        
+    </ul>
+
     <div id="game-board" class="board">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
@@ -37,5 +54,6 @@
     <h6 style="color:#F00">&copy;Tic Tac Toe</h6>
     
     <script src="scripts.js"></script>
+
 </body>
 </html>

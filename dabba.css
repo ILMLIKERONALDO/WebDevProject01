@@ -1,0 +1,21 @@
+#box{
+    width: 250px;
+    height: 250px;
+    background-color: #4A90E2;
+    justify-self: center;
+    border-radius:4px;
+    border: solid 2.5px black;
+}
+button{
+    width: 250px;
+    height: 50px;
+    background-color: #4A90E2;
+    justify-self: center;
+    border-radius:4px;
+    border: solid 2.5px black;
+}
+    button:hover{
+        background-color: #73a3d9;
+        width: 260px;
+        height: 60px;
+    }

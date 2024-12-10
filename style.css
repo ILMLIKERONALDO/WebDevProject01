@@ -1,0 +1,147 @@
+/* General body styles */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background for better contrast */
+    color: #333; /* Dark text for readability */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the main profile image */
+#myImg {
+    width: 30vw;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    border: 5px solid #333; /* Adds a dark border around the image */
+    margin: 20px auto; /* Adds some space around the image */
+}
+
+/* Styles for the micronation flag image */
+#micronationFlag {
+    width: 11.9vw; /* Width for the flag */
+    height: 7.3vw; /* Maintain aspect ratio */
+    margin-top: 10px;
+    border: 2px solid #333; /* Border around the flag */
+    border-radius: 5px; /* Slight rounding of the flag's edges */
+}
+
+/* Button styles */
+.headButtons, .htmlButtons, .ytlink {
+    display: inline-block;
+    background-color: #008CBA; /* Blue background for buttons */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for buttons */
+.headButtons:hover, .htmlButtons:hover, .ytlink:hover {
+    background-color: #005f75; /* Darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;
+}
+
+/* Header styling for micronation flag section */
+h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #008CBA;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    cursor: pointer;
+    margin: 20px;
+    display: none; /* Hidden by default, shown in media queries */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    flex-wrap: wrap; /* Wrap content for smaller screens */
+}
+
+/* When 'show' class is added, display nav-links in a vertical column */
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #008CBA;
+    font-size: 18px;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Styles for navigation bar's bars */
+.bar {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Image styles for Ilm Mubasher */
+.ilmmubasher {
+    width: 20vw;
+    height: auto;
+    float: left; /* Align the image to the left */
+    margin-right: 20px; /* Optional: Add space to the right */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: inline-block; /* Show hamburger icon on smaller screens */
+    }
+    .nav-links {
+        display: none; /* Hidden initially */
+    }
+}
+
+/* Recursive container styles */
+.recursive-container {
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+}
+
+/* Smooth scroll behavior for the page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Background image for the quote */
+#quote {
+    background-image: url("69177488_60x60.svg"); /* Fixed the background image syntax */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100px;
+    
+}
+#quote p {
+    font-family: sans-serif;
+    color: #ffffff; /* Fixed incorrect color syntax */
+    text-align: center; /* Center the text */
+    margin: 0;
+    padding: 0;
+}

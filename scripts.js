@@ -3,7 +3,7 @@ const cells = board.getElementsByClassName('cell');
 const status = document.getElementById('status');
 const resetButton = document.getElementById('reset-button');
 
-let styleColor = 'red';
+let styleColor = 'blue';
 let currentPlayer = 'X';
 let gameActive = true;
 const boardState = Array(9).fill(null);
@@ -26,15 +26,15 @@ const checkWinner = () => {
             return boardState[a];
         }
     }
-    return boardState.includes(null) ? null : 'T';
+    return boardState.includes(null) ? null : 'T';  // Check for tie
 };
 
 const handleClick = (event) => {
-    const index = event.target.dataset.index;
-    if (boardState[index] || !gameActive) return;
+    const index = event.target.dataset.index;  // Get the index from data-index attribute
+    if (boardState[index] || !gameActive) return;  // Ignore if the cell is already filled or game is inactive
 
     boardState[index] = currentPlayer;
-    event.target.textContent = currentPlayer;
+    event.target.textContent = currentPlayer;  // Set the clicked cell to current player's symbol
 
     const winner = checkWinner();
 
@@ -44,22 +44,39 @@ const handleClick = (event) => {
         return;
     }
 
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    styleColor = styleColor === 'red' ? 'blue' : 'red';
-    status.style.color = styleColor;
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';  // Switch player
+    styleColor = styleColor === 'blue' ? 'red' : 'blue';  // Switch style color
+    status.style.color = styleColor;  // Change status color
     status.textContent = `Player ${currentPlayer}'s turn`;
 
+    // Change background color for each cell
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.backgroundColor = styleColor;
+    }
 };
 
 const resetGame = () => {
     for (let i = 0; i < cells.length; i++) {
-        cells[i].textContent = '';
+        cells[i].textContent = '';  // Clear the text inside the cells
+        cells[i].style.backgroundColor = '';  // Reset background color
     }
-    boardState.fill(null);
+    boardState.fill(null);  // Reset board state
     currentPlayer = 'X';
     gameActive = true;
+    styleColor = 'red';  // Reset the starting color
+    status.style.color = styleColor;  // Reset status text color
     status.textContent = `Player ${currentPlayer}'s turn`;
 };
 
-board.addEventListener('click', handleClick);
+// Add event listeners to each cell for handling clicks
+for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener('click', handleClick);
+    cells[i].dataset.index = i;  // Assign the index to each cell
+}
+
 resetButton.addEventListener('click', resetGame);
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+}
+
